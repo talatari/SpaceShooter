@@ -18,26 +18,16 @@ namespace SpaceShooter
             else
             {
                 _controlType = ControlType.Keyboard;
-                //_joystick.gameObject.SetActive(false);
+                _joystick.gameObject.SetActive(false);
             }
         }
 
         private void Update()
         {
-            if (_spaceShip == null)
-            {
-                return;
-            }
+            if (_spaceShip == null) return;
 
-            if (_controlType == ControlType.Keyboard)
-            {
-                ControlKeyboard();
-            }
-
-            if (_controlType == ControlType.Touchscreen)
-            {
-                ControlTouchscreen();
-            }
+            if (_controlType == ControlType.Keyboard) ControlKeyboard();
+            if (_controlType == ControlType.Touchscreen) ControlTouchscreen();
         }
 
         private void ControlKeyboard()
@@ -50,15 +40,8 @@ namespace SpaceShooter
         {
             float thrust = 0.0f;
 
-            if (Input.GetKey(KeyCode.W))
-            {
-                thrust = 1.0f;
-            }
-
-            if (Input.GetKey(KeyCode.S))
-            {
-                thrust = -1.0f;
-            }
+            if (Input.GetKey(KeyCode.W)) thrust = 1.0f;
+            if (Input.GetKey(KeyCode.S)) thrust = -1.0f;
 
             _spaceShip.ThrustControl = thrust;
         }
@@ -67,15 +50,8 @@ namespace SpaceShooter
         {
             float torque = 0.0f;
 
-            if (Input.GetKey(KeyCode.A))
-            {
-                torque = 1.0f;
-            }
-
-            if (Input.GetKey(KeyCode.D))
-            {
-                torque = -1.0f;
-            }
+            if (Input.GetKey(KeyCode.A)) torque = 1.0f;
+            if (Input.GetKey(KeyCode.D)) torque = -1.0f;
 
             _spaceShip.TorqueControl = torque;
         }
