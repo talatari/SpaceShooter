@@ -6,6 +6,7 @@ namespace SpaceShooter
     {
         [Header("Fighter Pilot")]
         [SerializeField] private string _nickname;
+
         public string Nickname => _nickname;
 
 
