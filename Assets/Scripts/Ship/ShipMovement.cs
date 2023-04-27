@@ -18,13 +18,17 @@ namespace SpaceShooter
             else
             {
                 _controlType = ControlType.Keyboard;
-                //_joystick.gameObject.SetActive(false);
+                _joystick.gameObject.SetActive(false);
             }
         }
 
         private void Update()
         {
-            if (_spaceShip == null) return;
+            if (_spaceShip == null)
+            {
+                Debug.Log("SpaceShip drop in ShipMovement.Update()");
+                return;
+            }
 
             if (_controlType == ControlType.Keyboard) ControlKeyboard();
             if (_controlType == ControlType.Touchscreen) ControlTouchscreen();

@@ -110,7 +110,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2815170153561661864}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.4, z: 0}
+  m_LocalPosition: {x: 0, y: -0.3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -241,6 +241,7 @@ GameObject:
   - component: {fileID: 2220104881866630815}
   - component: {fileID: 341154708152822396}
   - component: {fileID: 3401469429992297412}
+  - component: {fileID: 1034211257313991779}
   m_Layer: 0
   m_Name: SpaceShip
   m_TagString: Untagged
@@ -308,7 +309,25 @@ MonoBehaviour:
   _hitPoints: 100
   _mass: 1
   _thrust: 500
-  _mobility: 1000
+  _mobility: 500
   _maxLinearVelocity: 10
-  _maxAngularVelocity: 180
+  _maxAngularVelocity: 150
   _inertia: 0.5
+--- !u!114 &1034211257313991779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4069075286012907577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d88d187d3339b4dcdbebc3785cb69499, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _camera: {fileID: 0}
+  _targetPointToCamera: {fileID: 2220104881866630815}
+  _interpolationLinear: 5
+  _interpolationAngular: 5
+  _cameraOffsetZ: -10
+  _forwardOffset: 3
