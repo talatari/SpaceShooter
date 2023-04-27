@@ -30,12 +30,6 @@ namespace SpaceShooter
             }
         }
 
-        private void Update()
-        {
-            SetThustContol();
-            SetTorqueContol();
-        }
-
         private void FixedUpdate()
         {
             UpdateRigidBodySpaceShip();
@@ -60,36 +54,6 @@ namespace SpaceShooter
             _rigiBodySpaceShip.AddTorque(
                 torque: -1 * _rigiBodySpaceShip.angularVelocity * (_mobility / _maxAngularVelocity) * _fixedDeltaTime,
                 mode: ForceMode2D.Force);
-        }
-
-        private void SetThustContol()
-        {
-            ThrustControl = 0.0f;
-
-            if (Input.GetKey(KeyCode.W))
-            {
-                ThrustControl = 1.0f;
-            }
-
-            if (Input.GetKey(KeyCode.S))
-            {
-                ThrustControl = -1.0f;
-            }
-        }
-
-        private void SetTorqueContol()
-        {
-            TorqueControl = 0.0f;
-
-            if (Input.GetKey(KeyCode.A))
-            {
-                TorqueControl = 1.0f;
-            }
-
-            if (Input.GetKey(KeyCode.D))
-            {
-                TorqueControl = -1.0f;
-            }
         }
 
 
