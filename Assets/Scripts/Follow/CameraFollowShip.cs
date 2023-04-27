@@ -11,13 +11,15 @@ namespace SpaceShooter
         [SerializeField] private float _cameraOffsetZ;
         [SerializeField] private float _forwardOffset;
 
-        private void Update()
+        private void FixedUpdate()
         {
             if (_camera == null || _targetPointToCamera == null)
             {
                 Debug.Log("Camera Or Transform drop in CameraFollowShip.Update()");
                 return;
             }
+
+            // TODO: refactoring all call transform in cash links;
 
             Vector2 cameraPosition = _camera.transform.position;
             Vector2 targetPosition = _targetPointToCamera.position + _targetPointToCamera.transform.up * _forwardOffset;
