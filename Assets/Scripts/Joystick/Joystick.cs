@@ -37,8 +37,8 @@ namespace SpaceShooter
                 PositionJoyStick = PositionJoyStick.normalized;
             }
 
-            float offsetX = sizeDeltaX / 2 - _imageJoyStick.rectTransform.sizeDelta.x / 2;
-            float offsetY = sizeDeltaY / 2 - _imageJoyStick.rectTransform.sizeDelta.y / 2;
+            float offsetX = (sizeDeltaX / 2) - _imageJoyStick.rectTransform.sizeDelta.x / 2;
+            float offsetY = (sizeDeltaY / 2) - _imageJoyStick.rectTransform.sizeDelta.y / 2;
 
             _imageJoyStick.rectTransform.anchoredPosition = new Vector2(
                 PositionJoyStick.x * offsetX,
