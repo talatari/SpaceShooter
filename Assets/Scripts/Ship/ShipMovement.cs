@@ -18,7 +18,7 @@ namespace SpaceShooter
             else
             {
                 _controlType = ControlType.Keyboard;
-                _joystick.gameObject.SetActive(false);
+                //_joystick.gameObject.SetActive(false);
             }
         }
 
@@ -58,13 +58,10 @@ namespace SpaceShooter
 
         private void ControlTouchscreen()
         {
-            Vector2 direction = _joystick.PositionJoyStick;
+            var direction = _joystick.PositionJoyStick;
 
-            var pointUp = Vector2.Dot(direction, _spaceShip.transform.up);
-            var pointRight = Vector2.Dot(direction, _spaceShip.transform.right);
-
-            _spaceShip.ThrustControl = Mathf.Max(0, pointUp);
-            _spaceShip.TorqueControl = -pointRight;
+            _spaceShip.ThrustControl = direction.y;
+            _spaceShip.TorqueControl = -1 * direction.x;
         }
 
 

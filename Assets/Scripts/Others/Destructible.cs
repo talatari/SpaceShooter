@@ -19,17 +19,11 @@ namespace SpaceShooter
 
         public void ApplyDamage(int damage)
         {
-            if (_indestructible)
-            {
-                return;
-            }
+            if (_indestructible) return;
 
             _currentHitPoints -= damage;
 
-            if (_currentHitPoints <= 0)
-            {
-                OnDeath();
-            }
+            if (_currentHitPoints <= 0) OnDeath();
         }
 
         protected virtual void OnDeath()
