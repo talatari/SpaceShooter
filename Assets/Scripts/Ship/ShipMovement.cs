@@ -26,7 +26,7 @@ namespace SpaceShooter
         {
             if (_spaceShip == null)
             {
-                Debug.Log("SpaceShip drop in ShipMovement.Update()");
+                //Debug.Log("SpaceShip drop in ShipMovement.Update()");
                 return;
             }
 
@@ -76,6 +76,8 @@ namespace SpaceShooter
             _spaceShip.ThrustControl = direction.y;
             _spaceShip.TorqueControl = -1 * direction.x;
         }
+
+        public void SetTargetShip(SpaceShip spaceShip) => _spaceShip = spaceShip;
 
 
     }

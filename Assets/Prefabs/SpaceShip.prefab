@@ -279,7 +279,7 @@ GameObject:
   - component: {fileID: 2220104881866630815}
   - component: {fileID: 341154708152822396}
   - component: {fileID: 3401469429992297412}
-  - component: {fileID: 1034211257313991779}
+  - component: {fileID: 4075620263114729113}
   m_Layer: 0
   m_Name: SpaceShip
   m_TagString: Untagged
@@ -351,7 +351,7 @@ MonoBehaviour:
   _maxLinearVelocity: 10
   _maxAngularVelocity: 100
   _inertia: 0.5
---- !u!114 &1034211257313991779
+--- !u!114 &4075620263114729113
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -360,15 +360,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 4069075286012907577}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d88d187d3339b4dcdbebc3785cb69499, type: 3}
+  m_Script: {fileID: 11500000, guid: 652ee334903a34f73a9b85d202331001, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _camera: {fileID: 0}
-  _targetPointToCamera: {fileID: 2220104881866630815}
-  _interpolationLinear: 5
-  _interpolationAngular: 5
-  _cameraOffsetZ: -10
-  _forwardOffset: 4
+  _velocityDamageModifier: 2
+  _damageConstant: 500
 --- !u!1 &5576990745863536280
 GameObject:
   m_ObjectHideFlags: 0

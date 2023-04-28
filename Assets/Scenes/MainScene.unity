@@ -237,6 +237,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e23303f1248d649af8d7f281d0ba8a58, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &1131084972 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2220104881866630815, guid: 68b3f131777f84feca646e1fd129fa87, type: 3}
+  m_PrefabInstance: {fileID: 5889466235400342815}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1439043892
 GameObject:
   m_ObjectHideFlags: 0
@@ -548,10 +553,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1034211257313991779, guid: 68b3f131777f84feca646e1fd129fa87, type: 3}
-      propertyPath: _camera
-      value: 
-      objectReference: {fileID: 519420031}
     - target: {fileID: 2220104881866630815, guid: 68b3f131777f84feca646e1fd129fa87, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -613,10 +614,22 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 184502809978781925, guid: 367ae6c59298546c98bcdc827e88af68, type: 3}
+      propertyPath: _spaceShip
+      value: 
+      objectReference: {fileID: 1131084970}
     - target: {fileID: 4170829854046185730, guid: 367ae6c59298546c98bcdc827e88af68, type: 3}
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 5946102405010541232, guid: 367ae6c59298546c98bcdc827e88af68, type: 3}
+      propertyPath: _camera
+      value: 
+      objectReference: {fileID: 519420031}
+    - target: {fileID: 5946102405010541232, guid: 367ae6c59298546c98bcdc827e88af68, type: 3}
+      propertyPath: _targetPointToCamera
+      value: 
+      objectReference: {fileID: 1131084972}
     - target: {fileID: 6514032407616153694, guid: 367ae6c59298546c98bcdc827e88af68, type: 3}
       propertyPath: _joystick
       value: 

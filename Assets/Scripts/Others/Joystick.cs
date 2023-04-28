@@ -11,7 +11,7 @@ namespace SpaceShooter
 
         public Vector2 PositionJoyStick { get; private set; }
 
-        public void OnDrag(PointerEventData eventData)
+        public void OnDrag(PointerEventData pointerEventData)
         {
             Vector2 position = Vector2.zero;
 
@@ -20,8 +20,8 @@ namespace SpaceShooter
 
             RectTransformUtility.ScreenPointToLocalPointInRectangle(
                 rect: _imageJoyStickBackGround.rectTransform,
-                screenPoint: eventData.position,
-                cam: eventData.pressEventCamera,
+                screenPoint: pointerEventData.position,
+                cam: pointerEventData.pressEventCamera,
                 localPoint: out position);
 
             position.x = position.x / sizeDeltaX;
@@ -43,12 +43,12 @@ namespace SpaceShooter
                 PositionJoyStick.y * offsetY);
         }
 
-        public void OnPointerDown(PointerEventData eventData)
+        public void OnPointerDown(PointerEventData pointerEventData)
         {
-            OnDrag(eventData);
+            OnDrag(pointerEventData);
         }
 
-        public void OnPointerUp(PointerEventData eventData)
+        public void OnPointerUp(PointerEventData pointerEventData)
         {
             PositionJoyStick = Vector2.zero;
             _imageJoyStick.rectTransform.anchoredPosition = Vector2.zero;

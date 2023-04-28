@@ -8,19 +8,19 @@ namespace SpaceShooter
         [SerializeField] private float _forceGravity;
         [SerializeField] private float _radiusGravity;
 
-        private void OnTriggerStay2D(Collider2D collision)
+        private void OnTriggerStay2D(Collider2D collider)
         {
-            if (collision.attachedRigidbody == null)
+            if (collider.attachedRigidbody == null)
                 return;
 
-            Vector2 direction = transform.position - collision.transform.position;
+            Vector2 direction = transform.position - collider.transform.position;
             float distance = direction.magnitude;
 
             if (distance < _radiusGravity)
             {
                 Vector2 forceGravity = direction.normalized * _forceGravity * (distance / _radiusGravity);
 
-                collision.attachedRigidbody.AddForce(
+                collider.attachedRigidbody.AddForce(
                     force: forceGravity,
                     mode: ForceMode2D.Force);
             }
