@@ -15,7 +15,7 @@ namespace SpaceShooter
         {
             if (_camera == null || _targetPointToCamera == null)
             {
-                Debug.Log("Camera Or Transform drop in CameraFollowShip.Update()");
+                //Debug.Log("Camera Or Transform drop in CameraFollowShip.Update()");
                 return;
             }
 
@@ -35,6 +35,11 @@ namespace SpaceShooter
                 _camera.transform.rotation = Quaternion.Slerp(
                     _camera.transform.rotation, _targetPointToCamera.rotation, _interpolationAngular * Time.deltaTime);
             }
+        }
+
+        public void SetTarget(Transform newTransform)
+        {
+            _targetPointToCamera = newTransform;
         }
 
 
