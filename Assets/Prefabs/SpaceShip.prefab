@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8826039154450409148}
   - component: {fileID: 2845285590582048904}
+  - component: {fileID: 4257809555222765858}
   m_Layer: 0
   m_Name: View
   m_TagString: Untagged
@@ -87,6 +88,41 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!58 &4257809555222765858
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1663218799420287307}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.4
 --- !u!1 &2815170153561661864
 GameObject:
   m_ObjectHideFlags: 0
@@ -310,10 +346,10 @@ MonoBehaviour:
   _indestructible: 0
   _hitPoints: 100
   _mass: 1
-  _thrust: 250
-  _mobility: 500
+  _thrust: 500
+  _mobility: 1000
   _maxLinearVelocity: 10
-  _maxAngularVelocity: 150
+  _maxAngularVelocity: 100
   _inertia: 0.5
 --- !u!114 &1034211257313991779
 MonoBehaviour:
@@ -349,7 +385,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &933720213550120529
 Transform:
   m_ObjectHideFlags: 0

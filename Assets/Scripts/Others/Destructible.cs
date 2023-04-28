@@ -19,7 +19,8 @@ namespace SpaceShooter
 
         public void ApplyDamage(int damage)
         {
-            if (_indestructible) return;
+            if (_indestructible)
+                return;
 
             _currentHitPoints -= damage;
 
