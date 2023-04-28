@@ -32,7 +32,8 @@ namespace SpaceShooter
 
             PositionJoyStick = new Vector2(position.x, position.y);
 
-            if (PositionJoyStick.magnitude > 1) PositionJoyStick = PositionJoyStick.normalized;
+            if (PositionJoyStick.magnitude > 1)
+                PositionJoyStick = PositionJoyStick.normalized;
 
             float offsetX = (sizeDeltaX / 2) - _imageJoyStick.rectTransform.sizeDelta.x / 2;
             float offsetY = (sizeDeltaY / 2) - _imageJoyStick.rectTransform.sizeDelta.y / 2;
