@@ -83,4 +83,4 @@ MonoBehaviour:
   _interpolationLinear: 5
   _interpolationAngular: 5
   _cameraOffsetZ: -10
-  _forwardOffset: 4
+  _forwardOffset: 0
