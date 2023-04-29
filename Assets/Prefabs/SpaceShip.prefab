@@ -281,6 +281,7 @@ GameObject:
   - component: {fileID: 3401469429992297412}
   - component: {fileID: 4075620263114729113}
   - component: {fileID: 3956219569697899671}
+  - component: {fileID: 6298466950386278234}
   m_Layer: 0
   m_Name: SpaceShip
   m_TagString: Untagged
@@ -302,7 +303,7 @@ Transform:
   m_Children:
   - {fileID: 8826039154450409148}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &341154708152822396
 Rigidbody2D:
@@ -346,12 +347,12 @@ MonoBehaviour:
   _nickname: MightyBlow
   _indestructible: 0
   _hitPoints: 100
-  _mass: 1
+  _mass: 0.5
   _thrust: 500
   _mobility: 1000
   _maxLinearVelocity: 10
   _maxAngularVelocity: 100
-  _inertia: 0.5
+  _inertia: 0.25
 --- !u!114 &4075620263114729113
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -365,7 +366,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _velocityDamageModifier: 2
-  _damageConstant: 500
+  _damageConstant: 100
 --- !u!114 &3956219569697899671
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -378,6 +379,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 086d8aff841df48ee8a6fd654b852981, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6298466950386278234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4069075286012907577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dbc9c8cdeb584baaa354bd7c6b87f6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _shipExplosionPrefab: {fileID: 4794043405585894037, guid: 2d48852ab7a1b46319bb5f31d953635b, type: 3}
+  _spaceShip: {fileID: 3401469429992297412}
 --- !u!1 &5576990745863536280
 GameObject:
   m_ObjectHideFlags: 0
