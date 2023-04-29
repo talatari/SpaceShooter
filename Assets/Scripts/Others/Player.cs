@@ -34,8 +34,6 @@ namespace SpaceShooter
 
         private void RespawnNewSpaceShip()
         {
-            Debug.Log("Player.RespawnNewSpaceShip()");
-
             var newSpaceShip = Instantiate(_playerSpaceShipPrefab, _startPosition, _startRotation);
 
             if (newSpaceShip.TryGetComponent<SpaceShip>(out SpaceShip spaceShip))

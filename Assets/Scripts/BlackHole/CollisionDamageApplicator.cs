@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 namespace SpaceShooter
 {
@@ -7,8 +8,13 @@ namespace SpaceShooter
         [SerializeField] private float _velocityDamageModifier;
         [SerializeField] private float _damageConstant;
 
+        private string _finish = "Finish";
+
         private void OnCollisionEnter2D(Collision2D collision)
         {
+            if (collision.collider.name == _finish)
+                SceneManager.LoadScene(1);
+
             if (transform.root.TryGetComponent<Destructible>(out Destructible destructible))
             {
                 destructible.ApplyDamage(
