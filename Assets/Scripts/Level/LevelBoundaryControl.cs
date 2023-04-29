@@ -22,11 +22,10 @@ namespace SpaceShooter
 
                 if (levelBoudary.LimitMode == LevelBoundary.Mode.Teleport)
                 {
-                    transform.position = -1.0f * transform.position.normalized * radius;
+                    transform.position = -1 * transform.position.normalized * radius;
                 }
             }
         }
-
 
 
     }
