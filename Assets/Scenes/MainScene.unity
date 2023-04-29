@@ -231,7 +231,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3401469429992297412, guid: 68b3f131777f84feca646e1fd129fa87, type: 3}
   m_PrefabInstance: {fileID: 5889466235400342815}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5889466235400342816}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e23303f1248d649af8d7f281d0ba8a58, type: 3}
@@ -339,6 +339,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e4a3c7c3331b4e2e81d9ee827584f75, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _doNotDestroyOnLoad: 1
   _radius: 10
   _limitMode: 0
 --- !u!4 &1639256853
@@ -650,28 +651,8 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 4069075286012907577, guid: 68b3f131777f84feca646e1fd129fa87, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 5889466235400342817}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 68b3f131777f84feca646e1fd129fa87, type: 3}
---- !u!1 &5889466235400342816 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4069075286012907577, guid: 68b3f131777f84feca646e1fd129fa87, type: 3}
-  m_PrefabInstance: {fileID: 5889466235400342815}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &5889466235400342817
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5889466235400342816}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 086d8aff841df48ee8a6fd654b852981, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &6998302523310341844
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -692,6 +673,10 @@ PrefabInstance:
       propertyPath: _camera
       value: 
       objectReference: {fileID: 519420031}
+    - target: {fileID: 5946102405010541232, guid: 367ae6c59298546c98bcdc827e88af68, type: 3}
+      propertyPath: _forwardOffset
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5946102405010541232, guid: 367ae6c59298546c98bcdc827e88af68, type: 3}
       propertyPath: _targetPointToCamera
       value: 
