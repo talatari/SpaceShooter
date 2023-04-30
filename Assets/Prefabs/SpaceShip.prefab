@@ -393,6 +393,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _shipExplosionPrefab: {fileID: 4794043405585894037, guid: 2d48852ab7a1b46319bb5f31d953635b, type: 3}
   _spaceShip: {fileID: 3401469429992297412}
+  _explosionSound: {fileID: 0}
 --- !u!1 &5576990745863536280
 GameObject:
   m_ObjectHideFlags: 0
