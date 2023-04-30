@@ -353,6 +353,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _seconds: 30
   _timerText: {fileID: 10611989}
+  _spaceShip: {fileID: 0}
 --- !u!1 &829305991
 GameObject:
   m_ObjectHideFlags: 0
@@ -556,7 +557,7 @@ PrefabInstance:
     - target: {fileID: 1324928117570704665, guid: 151bb607eba6249f288befedd7bf563c, type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: b0554890fa6d64bb982462c66fe1a1cf, type: 3}
+      objectReference: {fileID: 8300000, guid: 60830aec5ec8a462da149ecda6a24bf0, type: 3}
     - target: {fileID: 4847404186280614889, guid: 151bb607eba6249f288befedd7bf563c, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -611,7 +612,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6108518907949755812, guid: 151bb607eba6249f288befedd7bf563c, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

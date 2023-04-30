@@ -779,6 +779,10 @@ PrefabInstance:
       propertyPath: _targetPointToCamera
       value: 
       objectReference: {fileID: 1131084972}
+    - target: {fileID: 5946102405010541232, guid: 367ae6c59298546c98bcdc827e88af68, type: 3}
+      propertyPath: _targetPointToCometSpawner
+      value: 
+      objectReference: {fileID: 73113084354138109, guid: c723d19f58a3f4282897821660f4f39a, type: 3}
     - target: {fileID: 6514032407616153694, guid: 367ae6c59298546c98bcdc827e88af68, type: 3}
       propertyPath: _joystick
       value: 
