@@ -10,6 +10,7 @@ namespace SpaceShooter
         [SerializeField] private CameraFollowShip _cameraFollowShip;
         [SerializeField] private ShipMovement _shipMovement;
         [SerializeField] private ShipExplosionSound _shipExplosionSound;
+        [SerializeField] private UITimer _uITimer;
 
         private Vector3 _startPosition;
         private Quaternion _startRotation;
@@ -45,6 +46,7 @@ namespace SpaceShooter
                 _cameraFollowShip.SetTarget(_spaceShip.transform);
                 _shipMovement.SetTargetShip(_spaceShip);
                 _shipExplosionSound.SetTargetShip(_spaceShip);
+                _uITimer.SetTargetShip(_spaceShip);
             }
         }
 
