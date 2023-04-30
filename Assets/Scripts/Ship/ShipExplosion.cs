@@ -7,7 +7,7 @@ namespace SpaceShooter
         [SerializeField] private GameObject _shipExplosionPrefab;
         [SerializeField] private SpaceShip _spaceShip;
 
-        private float _lifeTime = 1.5f;
+        private float _lifeTimeEffectExplosion = 0.5f;
 
         private void Start()
         {
@@ -16,11 +16,9 @@ namespace SpaceShooter
 
         private void OnSpaceShipDeath()
         {
-            _spaceShip.OnDeath -= OnSpaceShipDeath;
+            var shipExplosion = Instantiate(_shipExplosionPrefab, _spaceShip.transform.position, Quaternion.identity);
 
-            var newSpaceShip = Instantiate(_shipExplosionPrefab, _spaceShip.transform.position, Quaternion.identity);
-
-            Destroy(newSpaceShip, _lifeTime);
+            Destroy(shipExplosion, _lifeTimeEffectExplosion);
         }
 
 

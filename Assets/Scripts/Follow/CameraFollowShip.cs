@@ -14,10 +14,7 @@ namespace SpaceShooter
         private void FixedUpdate()
         {
             if (_camera == null || _targetPointToCamera == null)
-            {
-                //Debug.Log("Camera Or Transform drop in CameraFollowShip.Update()");
                 return;
-            }
 
             // TODO: refactoring all call transform in cash links;
 

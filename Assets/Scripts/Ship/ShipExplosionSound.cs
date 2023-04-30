@@ -14,8 +14,6 @@ namespace SpaceShooter
 
         private void OnSpaceShipDeath()
         {
-            _spaceShip.OnDeath -= OnSpaceShipDeath;
-
             _explosionSound.Play();
         }
 
