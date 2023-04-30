@@ -6,6 +6,7 @@ namespace SpaceShooter
     {
         [SerializeField] private Camera _camera;
         [SerializeField] private Transform _targetPointToCamera;
+        [SerializeField] private Transform _targetPointToCometSpawner;
         [SerializeField] private float _interpolationLinear;
         [SerializeField] private float _interpolationAngular;
         [SerializeField] private float _cameraOffsetZ;
@@ -13,7 +14,7 @@ namespace SpaceShooter
 
         private void FixedUpdate()
         {
-            if (_camera == null || _targetPointToCamera == null)
+            if (_camera == null || _targetPointToCamera == null || _targetPointToCometSpawner == null)
                 return;
 
             // TODO: refactoring all call transform in cash links;
@@ -27,10 +28,14 @@ namespace SpaceShooter
             _camera.transform.position = new Vector3(
                 newCameraPosition.x, newCameraPosition.y, _cameraOffsetZ);
 
+            _targetPointToCometSpawner.transform.position = _camera.transform.position;
+
             if (_interpolationAngular > 0)
             {
                 _camera.transform.rotation = Quaternion.Slerp(
                     _camera.transform.rotation, _targetPointToCamera.rotation, _interpolationAngular * Time.deltaTime);
+
+                _targetPointToCometSpawner.transform.rotation = _camera.transform.rotation;
             }
         }
 
