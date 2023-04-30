@@ -303,7 +303,7 @@ Transform:
   m_Children:
   - {fileID: 8826039154450409148}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &341154708152822396
 Rigidbody2D:
@@ -393,7 +393,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _shipExplosionPrefab: {fileID: 4794043405585894037, guid: 2d48852ab7a1b46319bb5f31d953635b, type: 3}
   _spaceShip: {fileID: 3401469429992297412}
-  _explosionSound: {fileID: 0}
 --- !u!1 &5576990745863536280
 GameObject:
   m_ObjectHideFlags: 0

@@ -25,10 +25,7 @@ namespace SpaceShooter
         private void Update()
         {
             if (_spaceShip == null)
-            {
-                //Debug.Log("SpaceShip drop in ShipMovement.Update()");
                 return;
-            }
 
             if (_controlType == ControlType.Keyboard)
                 ControlKeyboard();
