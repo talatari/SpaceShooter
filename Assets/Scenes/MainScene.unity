@@ -756,6 +756,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 184502809978781925, guid: 367ae6c59298546c98bcdc827e88af68, type: 3}
+      propertyPath: _uITimer
+      value: 
+      objectReference: {fileID: 8114880745837226679, guid: d01c613670dbe4776996aa3c403e67d5, type: 3}
+    - target: {fileID: 184502809978781925, guid: 367ae6c59298546c98bcdc827e88af68, type: 3}
       propertyPath: _spaceShip
       value: 
       objectReference: {fileID: 1131084970}
