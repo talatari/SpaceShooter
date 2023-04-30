@@ -77,7 +77,10 @@ namespace SpaceShooter
             _spaceShip.TorqueControl = -1 * direction.x;
         }
 
-        public void SetTargetShip(SpaceShip spaceShip) => _spaceShip = spaceShip;
+        public void SetTargetShip(SpaceShip spaceShip)
+        {
+            _spaceShip = spaceShip;
+        }
 
 
     }
