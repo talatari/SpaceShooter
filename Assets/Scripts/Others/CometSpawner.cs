@@ -14,9 +14,7 @@ namespace SpaceShooter
         private void Start()
         {
             var randomIndex = Random.Range(0, _spawnPoints.Length);
-
-            var comet = Instantiate(
-                _cometPrefab, _spawnPoints[randomIndex].position, Quaternion.identity);
+            var comet = Instantiate(_cometPrefab, _spawnPoints[randomIndex].position, Quaternion.identity);
 
             Destroy(comet, _lifeTimeComet);
         }
