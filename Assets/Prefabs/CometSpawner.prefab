@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7056651472674324680}
+  - component: {fileID: 2418645230924010960}
   m_Layer: 0
   m_Name: SpawnPoint_01
   m_TagString: Untagged
@@ -31,6 +32,21 @@ Transform:
   m_Father: {fileID: 73113084354138109}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2418645230924010960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 881884264393992545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3d8e45011c874be19be6c2ab83bc324, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _cometPrefab: {fileID: 949487755879700256, guid: d691cc26ede3746d1b8d158eea22364e, type: 3}
+  _spawnPoints: []
+  _spaceShip: {fileID: 0}
 --- !u!1 &1140783729477303706
 GameObject:
   m_ObjectHideFlags: 0
@@ -148,7 +164,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4720509442353885449}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -177,6 +193,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3d8e45011c874be19be6c2ab83bc324, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _cometPrefab: {fileID: 949487755879700256, guid: d691cc26ede3746d1b8d158eea22364e, type: 3}
+  _spawnPoints:
+  - {fileID: 7056651472674324680}
+  - {fileID: 1852034431445730437}
+  - {fileID: 6827964013879830908}
+  - {fileID: 4271290216091464049}
+  - {fileID: 9021471514937549521}
+  - {fileID: 4612617660314605546}
+  - {fileID: 2715972797704852451}
+  - {fileID: 3770026438683151286}
+  _spaceShip: {fileID: 0}
 --- !u!1 &5719314404900236865
 GameObject:
   m_ObjectHideFlags: 0
