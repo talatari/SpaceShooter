@@ -7,8 +7,9 @@ namespace SpaceShooter
         [SerializeField] private float _speedFlyComet;
 
         private Vector3 _targetForComet;
+        private int _incrementDistanceForTarget = 13;
 
-        private void Update()
+        private void FixedUpdate()
         {
             MoveComet();
         }
@@ -21,7 +22,7 @@ namespace SpaceShooter
 
         public void SetTargetForComet(Vector3 target)
         {
-            _targetForComet += target * 13;
+            _targetForComet += target * _incrementDistanceForTarget;
         }
 
 

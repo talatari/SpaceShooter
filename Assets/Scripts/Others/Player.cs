@@ -11,6 +11,7 @@ namespace SpaceShooter
         [SerializeField] private ShipMovement _shipMovement;
         [SerializeField] private ShipExplosionSound _shipExplosionSound;
         [SerializeField] private UITimer _uITimer;
+        [SerializeField] private CometSpawner _cometSpawner;
 
         private Vector3 _startPosition;
         private Quaternion _startRotation;
@@ -40,13 +41,13 @@ namespace SpaceShooter
 
             if (newSpaceShip.TryGetComponent<SpaceShip>(out SpaceShip spaceShip))
             {
-                _spaceShip = spaceShip;
-                _spaceShip.OnDeath += OnSpaceShipDeath;
+                spaceShip.OnDeath += OnSpaceShipDeath;
 
-                _cameraFollowShip.SetTarget(_spaceShip.transform);
-                _shipMovement.SetTargetShip(_spaceShip);
-                _shipExplosionSound.SetTargetShip(_spaceShip);
-                _uITimer.SetTargetShip(_spaceShip);
+                _cameraFollowShip.SetTarget(spaceShip.transform);
+                _shipMovement.SetTargetShip(spaceShip);
+                _shipExplosionSound.SetTargetShip(spaceShip);
+                _uITimer.SetTargetShip(spaceShip);
+                _cometSpawner.SetTargetShip(spaceShip);
             }
         }
 
