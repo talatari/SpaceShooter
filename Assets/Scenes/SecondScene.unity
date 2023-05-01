@@ -373,6 +373,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1714052770 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5574563871241394050, guid: c723d19f58a3f4282897821660f4f39a, type: 3}
+  m_PrefabInstance: {fileID: 4447950616261030349}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1736289250 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6069539544102330150, guid: 151bb607eba6249f288befedd7bf563c, type: 3}
@@ -687,6 +692,10 @@ PrefabInstance:
       propertyPath: _spaceShip
       value: 
       objectReference: {fileID: 1131084970}
+    - target: {fileID: 7912846234428004503, guid: c723d19f58a3f4282897821660f4f39a, type: 3}
+      propertyPath: _targetForComet
+      value: 
+      objectReference: {fileID: 1714052770}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
