@@ -8,12 +8,15 @@ namespace SpaceShooter
         [SerializeField] private Transform[] _spawnPoints;
         [SerializeField] private SpaceShip _spaceShip;
 
+        // TODO: reduce the value to 3 seconds
         private float _lifeTimeComet = 30.0f;
 
         private void Start()
         {
+            var randomIndex = Random.Range(0, _spawnPoints.Length);
+
             var comet = Instantiate(
-                _cometPrefab, _spawnPoints[Random.Range(0, _spawnPoints.Length)].position, Quaternion.identity);
+                _cometPrefab, _spawnPoints[randomIndex].position, Quaternion.identity);
 
             Destroy(comet, _lifeTimeComet);
         }
