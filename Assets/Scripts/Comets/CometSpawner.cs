@@ -7,15 +7,18 @@ namespace SpaceShooter
         [SerializeField] private GameObject _cometPrefab;
         [SerializeField] private Transform[] _spawnPoints;
         [SerializeField] private SpaceShip _spaceShip;
-        [SerializeField] private Transform _targetForComet;
+        [SerializeField] private Transform[] _targetsForComet;
         [SerializeField] private CometMovement _cometMovement;
 
         // TODO: reduce the value to 3 seconds
         private float _lifeTimeComet = 30.0f;
+        private int _limitComet = 100;
+        private int _amountComet = 0;
 
-        private void Start()
+        private void Update()
         {
-            SpawnComet();
+            if (_amountComet <= _limitComet)
+                SpawnComet();
         }
 
         private void SpawnComet()
@@ -26,12 +29,14 @@ namespace SpaceShooter
 
             if (comet.TryGetComponent<CometMovement>(out CometMovement cometMovement))
             {
-                cometMovement.SetTargetForComet(_targetForComet.position);
+                var randomIndexComet = Random.Range(0, _targetsForComet.Length);
+                cometMovement.SetTargetForComet(_targetsForComet[randomIndexComet].position);
             }
+
+            _amountComet++;
 
             Destroy(comet, _lifeTimeComet);
         }
-
 
 
     }

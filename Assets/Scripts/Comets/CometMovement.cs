@@ -15,20 +15,13 @@ namespace SpaceShooter
 
         private void MoveComet()
         {
-            Debug.Log($"transform.position = {transform.position}");
-
-            while (transform.position != _targetForComet)
-            {
-                transform.position = Vector3.MoveTowards(
-                (Vector2)transform.position,
-                (Vector2)_targetForComet,
-                _speedFlyComet);
-            }
+            transform.position = Vector3.MoveTowards(
+                (Vector2)transform.position, (Vector2)_targetForComet, _speedFlyComet * Time.deltaTime);
         }
 
         public void SetTargetForComet(Vector3 target)
         {
-            _targetForComet = target;
+            _targetForComet += target * 13;
         }
 
 
