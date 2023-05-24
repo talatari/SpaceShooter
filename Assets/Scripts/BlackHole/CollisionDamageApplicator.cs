@@ -13,7 +13,7 @@ namespace SpaceShooter
 
         private void OnCollisionEnter2D(Collision2D collision)
         {
-            Debug.Log($"collision.collider.name = {collision.collider.name}");
+            //Debug.Log($"collision.collider.name = {collision.collider.name}");
 
             if (collision.collider.name == _finish)
                 SceneManager.LoadScene(1);

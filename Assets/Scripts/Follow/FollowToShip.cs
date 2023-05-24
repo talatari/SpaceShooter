@@ -5,7 +5,6 @@ namespace SpaceShooter
     public class FollowToShip : MonoBehaviour
     {
         public Transform _objectFollow;
-
         private Vector3 _deltaPosition;
 
         private void Start()
