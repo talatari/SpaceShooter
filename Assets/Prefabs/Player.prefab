@@ -32,7 +32,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6514032407616153694
 MonoBehaviour:
@@ -66,6 +66,9 @@ MonoBehaviour:
   _playerSpaceShipPrefab: {fileID: 4069075286012907577, guid: 68b3f131777f84feca646e1fd129fa87, type: 3}
   _cameraFollowShip: {fileID: 5946102405010541232}
   _shipMovement: {fileID: 6514032407616153694}
+  _shipExplosionSound: {fileID: 0}
+  _uITimer: {fileID: 8114880745837226679, guid: d01c613670dbe4776996aa3c403e67d5, type: 3}
+  _cometSpawner: {fileID: 0}
 --- !u!114 &5946102405010541232
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -80,6 +83,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _camera: {fileID: 0}
   _targetPointToCamera: {fileID: 0}
+  _targetPointToCometSpawner: {fileID: 73113084354138109, guid: c723d19f58a3f4282897821660f4f39a, type: 3}
   _interpolationLinear: 5
   _interpolationAngular: 5
   _cameraOffsetZ: -10

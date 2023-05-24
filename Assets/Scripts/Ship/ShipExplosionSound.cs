@@ -12,6 +12,11 @@ namespace SpaceShooter
             _spaceShip.OnDeath += OnSpaceShipDeath;
         }
 
+        private void OnDestroy()
+        {
+            _spaceShip.OnDeath -= OnSpaceShipDeath;
+        }
+
         private void OnSpaceShipDeath()
         {
             _explosionSound.Play();

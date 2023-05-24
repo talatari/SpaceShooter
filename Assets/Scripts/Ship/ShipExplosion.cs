@@ -16,6 +16,8 @@ namespace SpaceShooter
 
         private void OnSpaceShipDeath()
         {
+            _spaceShip.OnDeath -= OnSpaceShipDeath;
+
             var shipExplosion = Instantiate(_shipExplosionPrefab, _spaceShip.transform.position, Quaternion.identity);
 
             Destroy(shipExplosion, _lifeTimeEffectExplosion);

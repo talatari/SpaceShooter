@@ -13,7 +13,7 @@ namespace SpaceShooter
 
         private void Start()
         {
-            if (TryGetComponent<MeshRenderer>(out MeshRenderer meshRendererSpace))
+            if (TryGetComponent(out MeshRenderer meshRendererSpace))
             {
                 _materialSpace = meshRendererSpace.material;
                 _materialSpace.mainTextureScale = Vector2.one * _textureScale;
