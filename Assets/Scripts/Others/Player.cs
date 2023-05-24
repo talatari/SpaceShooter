@@ -28,10 +28,11 @@ namespace SpaceShooter
         {
             _spaceShip.OnDeath -= OnSpaceShipDeath;
 
-            //_amountLives--;
+            // TODO: reducing the number of lives
+            // _amountLives--;
             _amountLives++;
 
-            if (_amountLives > 0)
+            if (_amountLives > 0 && _amountLives < 50)
                 RespawnNewSpaceShip();
         }
 
@@ -39,7 +40,7 @@ namespace SpaceShooter
         {
             var newSpaceShip = Instantiate(_playerSpaceShipPrefab, _startPosition, _startRotation);
 
-            if (newSpaceShip.TryGetComponent<SpaceShip>(out SpaceShip spaceShip))
+            if (newSpaceShip.TryGetComponent(out SpaceShip spaceShip))
             {
                 spaceShip.OnDeath += OnSpaceShipDeath;
 
@@ -47,7 +48,9 @@ namespace SpaceShooter
                 _shipMovement.SetTargetShip(spaceShip);
                 _shipExplosionSound.SetTargetShip(spaceShip);
                 _uITimer.SetTargetShip(spaceShip);
-                _cometSpawner.SetTargetShip(spaceShip);
+
+                if (_cometSpawner != null)
+                    _cometSpawner.SetTargetShip(spaceShip);
             }
         }
 

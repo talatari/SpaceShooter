@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2845285590582048904}
   - component: {fileID: 4257809555222765858}
   m_Layer: 0
-  m_Name: View
+  m_Name: SpaceShipView
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -303,7 +303,7 @@ Transform:
   m_Children:
   - {fileID: 8826039154450409148}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &341154708152822396
 Rigidbody2D:

@@ -1,13 +1,14 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 namespace SpaceShooter
 {
     public class UITimer : MonoBehaviour
     {
         [SerializeField] private float _seconds;
-        [SerializeField] private Text _timerText;
+        [SerializeField] private TMP_Text _timerText;
         [SerializeField] private SpaceShip _spaceShip;
 
         private float _timeLeft;
@@ -45,6 +46,7 @@ namespace SpaceShooter
 
             float minutes = Mathf.FloorToInt(_timeLeft / 60);
             float seconds = Mathf.FloorToInt(_timeLeft % 60);
+
             _timerText.text = string.Format("{0:00} : {1:00}", minutes, seconds);
 
             if (_timeLeft == 0)

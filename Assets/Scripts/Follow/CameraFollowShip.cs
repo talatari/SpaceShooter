@@ -12,21 +12,22 @@ namespace SpaceShooter
         [SerializeField] private float _cameraOffsetZ;
         [SerializeField] private float _forwardOffset;
 
+        private Vector2 _cameraPosition;
+        private Vector2 _targetPosition;
+        private Vector2 _newCameraPosition;
+
         private void FixedUpdate()
         {
             if (_camera == null || _targetPointToCamera == null || _targetPointToCometSpawner == null)
                 return;
 
-            // TODO: refactoring all call transform in cash links;
+            _cameraPosition = _camera.transform.position;
 
-            Vector2 cameraPosition = _camera.transform.position;
-            Vector2 targetPosition = _targetPointToCamera.position + _targetPointToCamera.transform.up * _forwardOffset;
+            _targetPosition = _targetPointToCamera.position + _targetPointToCamera.transform.up * _forwardOffset;
 
-            Vector2 newCameraPosition = Vector2.Lerp(
-                cameraPosition, targetPosition, _interpolationAngular * Time.deltaTime);
+            _newCameraPosition = Vector2.Lerp(_cameraPosition, _targetPosition, _interpolationAngular * Time.deltaTime);
 
-            _camera.transform.position = new Vector3(
-                newCameraPosition.x, newCameraPosition.y, _cameraOffsetZ);
+            _camera.transform.position = new Vector3(_newCameraPosition.x, _newCameraPosition.y, _cameraOffsetZ);
 
             _targetPointToCometSpawner.transform.position = _camera.transform.position;
 

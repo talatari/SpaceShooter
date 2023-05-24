@@ -14,15 +14,14 @@ namespace SpaceShooter
                 return;
 
             Vector2 direction = transform.position - collider.transform.position;
+
             float distance = direction.magnitude;
 
             if (distance < _radiusGravity)
             {
                 Vector2 forceGravity = direction.normalized * _forceGravity * (distance / _radiusGravity);
 
-                collider.attachedRigidbody.AddForce(
-                    force: forceGravity,
-                    mode: ForceMode2D.Force);
+                collider.attachedRigidbody.AddForce(forceGravity, ForceMode2D.Force);
             }
         }
 
@@ -31,7 +30,10 @@ namespace SpaceShooter
 #if UNITY_EDITOR
         private void OnValidate()
         {
-            GetComponent<CircleCollider2D>().radius = _radiusGravity;
+            if (TryGetComponent(out CircleCollider2D circleCollider))
+            {
+                _radiusGravity = circleCollider.radius;
+            }
         }
 #endif
     }

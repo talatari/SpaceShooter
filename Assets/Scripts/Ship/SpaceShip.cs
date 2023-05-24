@@ -22,7 +22,7 @@ namespace SpaceShooter
         {
             base.Start();
 
-            if (TryGetComponent<Rigidbody2D>(out Rigidbody2D rigiBodySpaceShip))
+            if (TryGetComponent(out Rigidbody2D rigiBodySpaceShip))
             {
                 _rigiBodySpaceShip = rigiBodySpaceShip;
                 _rigiBodySpaceShip.mass = _mass;

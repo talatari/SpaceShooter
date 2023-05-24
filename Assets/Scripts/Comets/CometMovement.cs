@@ -5,9 +5,9 @@ namespace SpaceShooter
     public class CometMovement : MonoBehaviour
     {
         [SerializeField] private float _speedFlyComet;
+        [SerializeField] private int _incrementDistanceForTarget = 13;
 
-        private Vector3 _targetForComet;
-        private int _incrementDistanceForTarget = 13;
+        private Vector2 _targetForComet;
 
         private void FixedUpdate()
         {
@@ -16,11 +16,14 @@ namespace SpaceShooter
 
         private void MoveComet()
         {
-            transform.position = Vector3.MoveTowards(
-                (Vector2)transform.position, (Vector2)_targetForComet, _speedFlyComet * Time.deltaTime);
+            Vector2 currentCoemtPosition = transform.position;
+
+            float speed = _speedFlyComet * Time.deltaTime;
+
+            transform.position = Vector3.MoveTowards(currentCoemtPosition, _targetForComet, speed);
         }
 
-        public void SetTargetForComet(Vector3 target)
+        public void SetTargetForComet(Vector2 target)
         {
             _targetForComet += target * _incrementDistanceForTarget;
         }

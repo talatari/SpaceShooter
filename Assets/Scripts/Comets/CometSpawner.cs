@@ -28,7 +28,7 @@ namespace SpaceShooter
 
             var comet = Instantiate(_cometPrefab, spawnPositionCometWithoutZ, Quaternion.identity);
 
-            if (comet.TryGetComponent<CometMovement>(out CometMovement cometMovement))
+            if (comet.TryGetComponent(out CometMovement cometMovement))
                 cometMovement.SetTargetForComet(_spaceShip.transform.position);
 
             _amountComet++;
