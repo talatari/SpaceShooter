@@ -4,23 +4,28 @@ namespace SpaceShooter
 {
     public class LevelBoundaryControl : MonoBehaviour
     {
+        private LevelBoundary _levelBoudary;
+
+        private void Start()
+        {
+            _levelBoudary = LevelBoundary.Instance;
+        }
+
         private void Update()
         {
-            var levelBoudary = LevelBoundary.Instance;
-
-            if (levelBoudary == null)
+            if (_levelBoudary == null)
                 return;
 
-            var radius = levelBoudary.Radius;
+            float radius = _levelBoudary.Radius;
 
             if (transform.position.magnitude > radius)
             {
-                if (levelBoudary.LimitMode == LevelBoundary.Mode.Limit)
+                if (_levelBoudary.LimitMode == LevelBoundary.Mode.Limit)
                 {
                     transform.position = transform.position.normalized * radius;
                 }
 
-                if (levelBoudary.LimitMode == LevelBoundary.Mode.Teleport)
+                if (_levelBoudary.LimitMode == LevelBoundary.Mode.Teleport)
                 {
                     transform.position = -1 * transform.position.normalized * radius;
                 }

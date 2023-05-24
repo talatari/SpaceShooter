@@ -367,7 +367,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _doNotDestroyOnLoad: 1
-  _radius: 200000
+  _radius: 20
   _limitMode: 0
 --- !u!4 &1639256853
 Transform:
@@ -409,7 +409,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4847404186280614889, guid: 151bb607eba6249f288befedd7bf563c, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 4847404186280614889, guid: 151bb607eba6249f288befedd7bf563c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -453,7 +453,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6068765477251826346, guid: 151bb607eba6249f288befedd7bf563c, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6069539544102330150, guid: 151bb607eba6249f288befedd7bf563c, type: 3}
       propertyPath: _spaceShip
@@ -478,7 +478,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 455321429546988351, guid: d01c613670dbe4776996aa3c403e67d5, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 455321429546988351, guid: d01c613670dbe4776996aa3c403e67d5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -696,7 +696,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 73113084354138109, guid: c723d19f58a3f4282897821660f4f39a, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 73113084354138109, guid: c723d19f58a3f4282897821660f4f39a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -746,6 +746,10 @@ PrefabInstance:
       propertyPath: _spaceShip
       value: 
       objectReference: {fileID: 1131084970}
+    - target: {fileID: 7912846234428004503, guid: c723d19f58a3f4282897821660f4f39a, type: 3}
+      propertyPath: _cooldownRespawn
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
