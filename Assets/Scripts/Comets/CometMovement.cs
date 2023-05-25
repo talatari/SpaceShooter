@@ -1,13 +1,16 @@
 using UnityEngine;
+using static UnityEngine.GraphicsBuffer;
 
 namespace SpaceShooter
 {
     public class CometMovement : MonoBehaviour
     {
         [SerializeField] private float _speedFlyComet;
-        [SerializeField] private int _incrementDistanceForTarget = 13;
+        //[SerializeField] private int _incrementDistanceForTarget = 13;
 
-        private Vector2 _targetForComet;
+        private Vector3 _targetForComet;
+        private Vector3 _currentCometPosition;
+        private float _speed;
 
         private void FixedUpdate()
         {
@@ -16,16 +19,18 @@ namespace SpaceShooter
 
         private void MoveComet()
         {
-            Vector2 currentCoemtPosition = transform.position;
+            _currentCometPosition = transform.position;
 
-            float speed = _speedFlyComet * Time.deltaTime;
+            _speed = _speedFlyComet * Time.deltaTime;
 
-            transform.position = Vector3.MoveTowards(currentCoemtPosition, _targetForComet, speed);
+            //transform.position = Vector2.MoveTowards(_currentCometPosition, _targetForComet, _speed);
+
+            transform.Translate(_targetForComet * Time.deltaTime);
         }
 
-        public void SetTargetForComet(Vector2 target)
+        public void SetTargetForComet(Vector3 target)
         {
-            _targetForComet += target * _incrementDistanceForTarget;
+            _targetForComet = target;
         }
 
 

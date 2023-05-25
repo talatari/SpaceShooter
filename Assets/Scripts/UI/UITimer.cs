@@ -29,7 +29,11 @@ namespace SpaceShooter
                 if (_timeLeft > 0)
                 {
                     _timeLeft -= Time.deltaTime;
-                    UpdateTimeText();
+
+                    if (_spaceShip != null)
+                        UpdateTimeText();
+                    else
+                        _timerOn = false;
                 }
                 else
                 {
