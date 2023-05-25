@@ -19,6 +19,8 @@ namespace SpaceShooter
             _timeLeft = _seconds;
             _timerOn = true;
 
+            _spaceShip = GameObject.FindObjectOfType<SpaceShip>();
+
             _spaceShip.OnDeath += ResetTimer;
         }
 

@@ -26,6 +26,7 @@ namespace SpaceShooter
             //transform.position = Vector2.MoveTowards(_currentCometPosition, _targetForComet, _speed);
 
             transform.Translate(_targetForComet * Time.deltaTime);
+
         }
 
         public void SetTargetForComet(Vector3 target)

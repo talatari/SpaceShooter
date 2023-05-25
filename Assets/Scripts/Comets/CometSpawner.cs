@@ -55,6 +55,8 @@ namespace SpaceShooter
             if (comet.TryGetComponent(out CometMovement cometMovement))
                 cometMovement.SetTargetForComet(_spaceShip.transform.position);
 
+
+
             _amountComet++;
 
             Destroy(comet, _lifeTimeComet);

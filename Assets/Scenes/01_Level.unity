@@ -520,50 +520,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1858754101821907517, guid: d01c613670dbe4776996aa3c403e67d5, type: 3}
-      propertyPath: m_fontSize
-      value: 72
-      objectReference: {fileID: 0}
-    - target: {fileID: 1858754101821907517, guid: d01c613670dbe4776996aa3c403e67d5, type: 3}
-      propertyPath: m_fontAsset
-      value: 
-      objectReference: {fileID: 11400000, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
-    - target: {fileID: 1858754101821907517, guid: d01c613670dbe4776996aa3c403e67d5, type: 3}
-      propertyPath: m_sharedMaterial
-      value: 
-      objectReference: {fileID: 2180264, guid: 2e498d1c8094910479dc3e1b768306a4, type: 2}
-    - target: {fileID: 1858754101821907517, guid: d01c613670dbe4776996aa3c403e67d5, type: 3}
-      propertyPath: m_VerticalAlignment
-      value: 512
-      objectReference: {fileID: 0}
-    - target: {fileID: 1858754101821907517, guid: d01c613670dbe4776996aa3c403e67d5, type: 3}
-      propertyPath: m_HorizontalAlignment
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3348029339794623223, guid: d01c613670dbe4776996aa3c403e67d5, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0.86600006
-      objectReference: {fileID: 0}
-    - target: {fileID: 3348029339794623223, guid: d01c613670dbe4776996aa3c403e67d5, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0.90700006
-      objectReference: {fileID: 0}
-    - target: {fileID: 3348029339794623223, guid: d01c613670dbe4776996aa3c403e67d5, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3348029339794623223, guid: d01c613670dbe4776996aa3c403e67d5, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3348029339794623223, guid: d01c613670dbe4776996aa3c403e67d5, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3348029339794623223, guid: d01c613670dbe4776996aa3c403e67d5, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 5552614831520955823, guid: d01c613670dbe4776996aa3c403e67d5, type: 3}
       propertyPath: m_Name
       value: UI
@@ -572,10 +528,6 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 519420031}
-    - target: {fileID: 5775480075819362416, guid: d01c613670dbe4776996aa3c403e67d5, type: 3}
-      propertyPath: m_RenderMode
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8114880745837226679, guid: d01c613670dbe4776996aa3c403e67d5, type: 3}
       propertyPath: _spaceShip
       value: 
