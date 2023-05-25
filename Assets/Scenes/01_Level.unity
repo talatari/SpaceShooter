@@ -367,7 +367,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _doNotDestroyOnLoad: 1
-  _radius: 20
+  _radius: 2000000
   _limitMode: 0
 --- !u!4 &1639256853
 Transform:
@@ -747,6 +747,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1131084970}
     - target: {fileID: 7912846234428004503, guid: c723d19f58a3f4282897821660f4f39a, type: 3}
+      propertyPath: _cometPrefab
+      value: 
+      objectReference: {fileID: 949487755879700256, guid: d691cc26ede3746d1b8d158eea22364e, type: 3}
+    - target: {fileID: 7912846234428004503, guid: c723d19f58a3f4282897821660f4f39a, type: 3}
       propertyPath: _cooldownRespawn
       value: 1
       objectReference: {fileID: 0}
@@ -846,7 +850,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2220104881866630815, guid: 68b3f131777f84feca646e1fd129fa87, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 2.01
       objectReference: {fileID: 0}
     - target: {fileID: 2220104881866630815, guid: 68b3f131777f84feca646e1fd129fa87, type: 3}
       propertyPath: m_LocalPosition.z

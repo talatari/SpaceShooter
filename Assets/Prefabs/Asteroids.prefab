@@ -132,4 +132,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4f29ccc63c324866bb77f1ed4a0ceb8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _speedFlyComet: 5
+  _speedFlyComet: 7.5
+  _incrementDistanceForTarget: 13
